@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas></canvas>
+  </body>
+</html>
+<script src="../Shapes.js"></script>
+<script src="../CanvasUtils.js"></script>
+<script>
+  let { $: myCanvas } = new CnavasUtils();
+  let canvas = myCanvas("canvas").attr({
+    width: 600,
+    height: 600
+  });
+
+  canvas.drawBlock({
+    x: 150,
+    y: 150,
+    width: 200,
+    height: 200,
+    lineWidth: 5,
+    strokeStyle: "red",
+    fillStyle: "blue",
+    fill: true
+  });
+</script>

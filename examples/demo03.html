@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas></canvas>
+  </body>
+</html>
+<script src="../Shapes.js"></script>
+<script src="../CanvasUtils.js"></script>
+<script>
+  window.onload = async () => {
+    let { loadImages } = new CnavasUtils();
+    let getImageList = await loadImages([
+      {
+        name: "test1",
+        src: "../images/01.png"
+      },
+      {
+        name: "test2",
+        src: "../images/02.png"
+      },
+      {
+        name: "test3",
+        src: "../images/03.png"
+      }
+    ]);
+    console.log(getImageList);
+  };
+</script>

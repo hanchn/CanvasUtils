@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas></canvas>
+  </body>
+</html>
+<script src="../Shapes.js"></script>
+<script src="../CanvasUtils.js"></script>
+<script>
+  let { $: myCanvas } = new CnavasUtils();
+  let canvas = myCanvas("canvas").attr({
+    width: 600,
+    height: 600
+  });
+
+  canvas.drawRound({
+    x: 100,
+    y: 100,
+    r: 50,
+    sAngle: 0,
+    eAngle: 2 * Math.PI,
+    fill: true,
+    fillStyle: "red",
+    lineWidth: 30,
+    strokeStyle: "green",
+    counterclockwise: true
+  });
+</script>
